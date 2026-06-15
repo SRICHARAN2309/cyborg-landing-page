@@ -77,22 +77,38 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "UNIT-07 // Cybernetic Challenge — Techfest 2026, IIT Bombay" },
+      {
+        name: "description",
+        content:
+          "Engineer the next cybernetic frontier. Join the UNIT-07 Cybernetic Challenge at Techfest 2026, IIT Bombay — India's largest science and technology festival.",
+      },
+      { name: "author", content: "Techfest, IIT Bombay" },
+      { property: "og:title", content: "UNIT-07 // Cybernetic Challenge — Techfest 2026" },
+      {
+        property: "og:description",
+        content:
+          "Engineer the next cybernetic frontier at Techfest 2026, IIT Bombay. Build, compete, and prototype the future of human-machine interfaces.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "UNIT-07 // Cybernetic Challenge — Techfest 2026" },
+      {
+        name: "twitter:description",
+        content: "Engineer the next cybernetic frontier at Techfest 2026, IIT Bombay.",
+      },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap",
       },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
