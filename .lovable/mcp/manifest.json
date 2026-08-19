@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.2",
+  "path": "/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "cyborg-landing-page",
+      "version": "0.1.0",
+      "title": "Cyborg Landing Page"
+    },
+    "tools": [
+      {
+        "name": "get_challenge_overview",
+        "title": "Get challenge overview",
+        "description": "Get the overview of the UNIT-07 Cybernetic Challenge at Techfest 2026, IIT Bombay: summary, prize pool, fee, and contact.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_tracks",
+        "title": "List competition tracks",
+        "description": "List the six UNIT-07 competition tracks with their codes and descriptions.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_timeline",
+        "title": "Get challenge timeline",
+        "description": "Get the UNIT-07 mission phases: registration, submission deadline, finals, and awards dates.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "search_faq",
+        "title": "Search FAQ",
+        "description": "Search the UNIT-07 challenge FAQ (eligibility, hardware, submission format, prizes, fees, contact). Omit the query to get every entry.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "query": {
+              "description": "Keywords to match against questions and answers.",
+              "type": "string"
+            }
+          }
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
